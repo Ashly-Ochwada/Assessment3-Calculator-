@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity() {
         validate()
 
         btnAddition.setOnClickListener {
-
             var nums1 = etNum1.text.toString().toDouble()
             var nums2 = etNum2.text.toString().toDouble()
 
@@ -89,6 +88,10 @@ class MainActivity : AppCompatActivity() {
         if(nums2.isBlank()){
             tilNum2.error = "Second number is required"
             error = true
+
+        }
+        if (!error){
+
         }
     }
 }
