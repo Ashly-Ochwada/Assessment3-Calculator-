@@ -18,18 +18,11 @@ class MainActivity : AppCompatActivity() {
     lateinit var btnModulus: Button
     lateinit var btnDivision: Button
     lateinit var tvResult: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        tilNum1=findViewById(R.id.tilNum1)
-        etNum1=findViewById(R.id.etNum1)
-        tilNum2 = findViewById(R.id.tilNum2)
-        etNum2 = findViewById(R.id.etNum2)
-        btnAddition = findViewById(R.id.btnAddition)
-        btnSubtraction = findViewById(R.id.btnSubtraction)
-        btnModulus = findViewById(R.id.btnModulus)
-        btnDivision =findViewById(R.id.btnDivision)
-        tvResult= findViewById(R.id.tvResult)
+        castviews()
         validate()
 
         btnAddition.setOnClickListener {
@@ -57,6 +50,18 @@ class MainActivity : AppCompatActivity() {
             divide(nums1, nums2)
         }
 
+
+    }
+    fun castviews(){
+        tilNum1=findViewById(R.id.tilNum1)
+        etNum1=findViewById(R.id.etNum1)
+        tilNum2 = findViewById(R.id.tilNum2)
+        etNum2 = findViewById(R.id.etNum2)
+        btnAddition = findViewById(R.id.btnAddition)
+        btnSubtraction = findViewById(R.id.btnSubtraction)
+        btnModulus = findViewById(R.id.btnModulus)
+        btnDivision =findViewById(R.id.btnDivision)
+        tvResult= findViewById(R.id.tvResult)
     }
     fun add(nums1:Double, nums2:Double){
 
